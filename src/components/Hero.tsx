@@ -80,7 +80,7 @@ export function Hero() {
       </div>
       <div className="relative z-10 max-w-5xl mx-auto text-center">
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-snug md:leading-tight">
           <span className="text-white">Empowering </span>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 via-purple-400 to-blue-400">young</span>
           <span className="text-white"> minds</span>
