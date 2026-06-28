@@ -50,7 +50,7 @@ export function Hero() {
           type="button"
           onClick={() => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length)}
           aria-label="Previous slide"
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white transition hover:bg-black/70"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-black/50 p-3 text-white transition hover:bg-black/70"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
@@ -59,12 +59,12 @@ export function Hero() {
           type="button"
           onClick={() => setCurrentIndex((prev) => (prev + 1) % slides.length)}
           aria-label="Next slide"
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/50 p-3 text-white transition hover:bg-black/70"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-black/50 p-3 text-white transition hover:bg-black/70"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
 
-        <div className="absolute left-0 right-0 bottom-6 flex justify-center gap-3">
+        <div className="absolute left-0 right-0 bottom-6 z-20 flex justify-center gap-3">
           {slides.map((_, index) => (
             <button
               key={index}

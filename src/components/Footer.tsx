@@ -21,7 +21,7 @@ const socials = [
   { icon: ArrowRight, href: "#", label: "Instagram" },
 ];
 
-export function Footer({ onCategoryClick }: { onCategoryClick: (category: CategoryKey) => void }) {
+export function Footer({ onCategoryClick, onNavigate}: { onCategoryClick: (category: CategoryKey) => void, onNavigate: (page: 'home' | 'privacy' | 'terms') => void }) {
   return (
     <footer className="relative py-16 px-6 border-t border-neutral-800">
       <div className="max-w-screen-2xl mx-auto">
@@ -90,8 +90,24 @@ export function Footer({ onCategoryClick }: { onCategoryClick: (category: Catego
             © 2026 EdTech. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-neutral-500">
-            <a href="#" className="hover:text-white transition-colors duration-300">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors duration-300">Terms of Service</a>
+            <button 
+              onClick={() => {
+                onNavigate('privacy');
+                window.scrollTo(0, 0); // Scroll to top when page changes
+              }} 
+              className="hover:text-white transition-colors duration-300"
+            >
+              Privacy Policy
+            </button>
+            <button 
+              onClick={() => {
+                onNavigate('terms');
+                window.scrollTo(0, 0);
+              }} 
+              className="hover:text-white transition-colors duration-300"
+            >
+              Terms of Service
+            </button>
           </div>
         </div>
       </div>

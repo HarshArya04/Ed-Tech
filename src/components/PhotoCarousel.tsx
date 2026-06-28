@@ -51,7 +51,7 @@ export function PhotoCarousel() {
 
         <button
           type="button"
-          className="absolute left-4 top-1/2 -translate-y-1/2 rounded-full bg-black/60 p-3 text-white transition hover:bg-black/80"
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-black/60 p-3 text-white transition hover:bg-black/80"
           onClick={() => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length)}
           aria-label="Previous photo"
         >
@@ -60,14 +60,14 @@ export function PhotoCarousel() {
 
         <button
           type="button"
-          className="absolute right-4 top-1/2 -translate-y-1/2 rounded-full bg-black/60 p-3 text-white transition hover:bg-black/80"
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 rounded-full bg-black/60 p-3 text-white transition hover:bg-black/80"
           onClick={() => setCurrentIndex((prev) => (prev + 1) % slides.length)}
           aria-label="Next photo"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
 
-        <div className="absolute left-0 right-0 bottom-4 flex justify-center gap-3">
+        <div className="absolute left-0 right-0 bottom-4 z-20 flex justify-center gap-3">
           {slides.map((_, index) => (
             <button
               key={index}

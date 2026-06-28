@@ -20,7 +20,7 @@ const videos = Object.values(videoModules)
 const projects = [
   {
     title: "Smart Street Light",
-    description: projectImages[0]?.name ?? "A fully functional prosthetic designed and printed by our students.",
+    description: projectImages[0]?.name ?? "A fully functional prosthetic designed and printed by our students. ",
     size: "large",
     featured: true,
     image: projectImages[0]?.src,

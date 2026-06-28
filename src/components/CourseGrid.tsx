@@ -104,7 +104,7 @@ export function CourseGrid({ onCategoryClick }: { onCategoryClick: (category: Ca
         <div className="max-w-screen-2xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What we <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">Provide</span> you?
+              What do we <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">Provide</span> you?
             </h2>
           </div>
           <div className="w-full px-4 sm:px-6 lg:px-8 mb-10">

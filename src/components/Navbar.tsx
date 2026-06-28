@@ -5,9 +5,10 @@ import Logo from "../assets/Logo_refined.png";
 
 interface NavbarProps {
   onCategoryClick: (category: CategoryKey) => void;
+  onNavigateHome: () => void; // <-- Add this new line
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onCategoryClick }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onCategoryClick, onNavigateHome}) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMobileDropdown, setActiveMobileDropdown] = useState<string | null>(null);
 
@@ -40,6 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCategoryClick }) => {
     setActiveMobileDropdown(activeMobileDropdown === menu ? null : menu);
   };
 
+
   return (
     <nav className={`w-full fixed top-0 left-0 z-50 transition-all duration-300 ${isOpen ? "bg-neutral-950 h-screen overflow-y-auto" : "bg-black/80 backdrop-blur-md border-b border-white/5"}`}>
       <div className="max-w-screen-2xl mx-auto px-6 lg:px-8">
@@ -55,6 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCategoryClick }) => {
               href="#"
               onClick={(e) => {
                 e.preventDefault();
+                onNavigateHome();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className="hover:text-violet-400 transition-colors"
@@ -130,6 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCategoryClick }) => {
               onClick={(e) => {
                 e.preventDefault();
                 setIsOpen(false);
+                onNavigateHome();
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}
               className="hover:text-violet-400 transition-colors border-b border-neutral-800/50 pb-4"
