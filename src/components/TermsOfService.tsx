@@ -1,5 +1,3 @@
-import React from "react";
-
 export function TermsOfService() {
   return (
     <section className="min-h-screen pt-32 pb-16 px-6 bg-neutral-950">
