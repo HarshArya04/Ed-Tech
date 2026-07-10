@@ -45,7 +45,7 @@ export function PrivacyPolicy() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-3">5. Contact Us</h2>
             <p>
-              If you have any questions about this Privacy Policy, please contact us at <a href="mailto:EdTech@gmail.com" className="text-violet-400 hover:text-violet-300 transition-colors">EdTech@gmail.com</a>.
+              If you have any questions about this Privacy Policy, please contact us at <a href="mailto:office.edtech@gmail.com" className="text-violet-400 hover:text-violet-300 transition-colors">office.edtech@gmail.com</a>.
             </p>
           </section>
         </div>

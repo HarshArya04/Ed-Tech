@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, Mail } from "lucide-react";
+import { Phone, Mail, Loader } from "lucide-react";
 
 export function ContactUs() {
   const [name, setName] = useState("");
@@ -7,17 +7,42 @@ export function ContactUs() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // For now just simulate submit — integrate backend later
-    console.log({ name, email, phone, message });
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
-    setName("");
-    setEmail("");
-    setPhone("");
-    setMessage("");
+    setIsLoading(true);
+    setError("");
+
+    try {
+      // Send email via mailto link with form data
+      const mailtoLink = `mailto:office.edtech@gmail.com?subject=${encodeURIComponent("New Contact Form Submission from " + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`;
+      
+      // Alternative: Use fetch to send via a backend (you can set this up later)
+      // const response = await fetch('/api/send-email', {
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
+      //   body: JSON.stringify({ name, email, phone, message, to: 'office.edtech@gmail.com' })
+      // });
+
+      // For now, open mailto link and show success
+      window.location.href = mailtoLink;
+      setSubmitted(true);
+      
+      setTimeout(() => {
+        setSubmitted(false);
+        setName("");
+        setEmail("");
+        setPhone("");
+        setMessage("");
+      }, 3000);
+    } catch (err) {
+      setError("Failed to send message. Please try again.");
+      console.error(err);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -50,8 +75,12 @@ export function ContactUs() {
               </div>
 
               <div>
-                <button type="submit" className="inline-flex items-center gap-2 bg-violet-500 hover:bg-violet-600 text-white px-5 py-3 rounded-lg">{submitted ? 'Submitted' : 'Send Message'}</button>
+                <button type="submit" disabled={isLoading} className={`inline-flex items-center gap-2 px-5 py-3 rounded-lg transition ${isLoading ? 'bg-neutral-600 text-neutral-300 cursor-not-allowed' : submitted ? 'bg-green-500 text-white' : 'bg-violet-500 hover:bg-violet-600 text-white'}`}>
+                  {isLoading && <Loader className="w-4 h-4 animate-spin" />}
+                  {submitted ? 'Submitted Successfully!' : isLoading ? 'Sending...' : 'Send Message'}
+                </button>
               </div>
+              {error && <p className="text-red-400 text-sm mt-2">{error}</p>}
             </form>
           </div>
 
@@ -73,9 +102,9 @@ export function ContactUs() {
             </div>
 
             <div className="mt-10">
-              <a href="mailto:EdTech@gmail.com" className="flex items-center gap-3 text-lg md:text-xl text-neutral-300 hover:text-violet-400">
+              <a href="mailto:office.edtech@gmail.com" className="flex items-center gap-3 text-lg md:text-xl text-neutral-300 hover:text-violet-400">
                 <Mail className="w-5 h-5 text-violet-400" />
-                EdTech@gmail.com
+                office.edtech@gmail.com
               </a>
             </div>
 
