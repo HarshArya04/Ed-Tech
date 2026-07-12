@@ -64,7 +64,7 @@ export function Footer({ onCategoryClick, onNavigate}: { onCategoryClick: (categ
           </div>
 
           {/* Social & CTA */}
-          <div>
+          {/* <div>
             <h4 className="text-lg font-semibold text-white mb-4">Connect With Us</h4>
             <div className="flex gap-3 mb-6">
               {socials.map((social) => {
@@ -81,7 +81,7 @@ export function Footer({ onCategoryClick, onNavigate}: { onCategoryClick: (categ
                 );
               })}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Bottom Bar */}
