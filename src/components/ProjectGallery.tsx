@@ -121,7 +121,7 @@ export function ProjectGallery() {
               <div
                 className={`
                   relative bg-neutral-700/30
-                  ${project.size === "large" ? "h-96" : "h-48"}
+                  ${project.size === "large" ? "h-[520px]" : "h-48"}
                 `}
               >
                 {project.image ? (
@@ -163,7 +163,7 @@ export function ProjectGallery() {
               </div>
 
               {/* Content */}
-              <div className="p-3">
+              <div className="p-2">
                 {/* <div className="flex items-center gap-2 mb-2">
                   <span className="text-xs text-violet-400 font-medium uppercase tracking-wider">
                     {project.category}

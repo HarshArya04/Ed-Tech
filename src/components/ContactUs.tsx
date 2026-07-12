@@ -16,29 +16,44 @@ export function ContactUs() {
     setError("");
 
     try {
-      // Send email via mailto link with form data
-      const mailtoLink = `mailto:office.edtech@gmail.com?subject=${encodeURIComponent("New Contact Form Submission from " + name)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`)}`;
-      
-      // Alternative: Use fetch to send via a backend (you can set this up later)
-      // const response = await fetch('/api/send-email', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify({ name, email, phone, message, to: 'office.edtech@gmail.com' })
-      // });
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          // REPLACE THIS WITH YOUR ACTUAL ACCESS KEY FROM WEB3FORMS
+          access_key: "df0c55bb-daa8-4ffa-9696-cc7a40254fdf", 
+          subject: `New Contact Form Submission from ${name}`,
+          from_name: "EdTech Website",
+          name: name,
+          email: email,
+          phone: phone || "Not provided",
+          message: message,
+        }),
+      });
 
-      // For now, open mailto link and show success
-      window.location.href = mailtoLink;
-      setSubmitted(true);
-      
-      setTimeout(() => {
-        setSubmitted(false);
+      const result = await response.json();
+
+      if (result.success) {
+        setSubmitted(true);
+        
+        // Clear the form
         setName("");
         setEmail("");
         setPhone("");
         setMessage("");
-      }, 3000);
+        
+        // Reset success state after 3 seconds
+        setTimeout(() => {
+          setSubmitted(false);
+        }, 3000);
+      } else {
+        setError(result.message || "Failed to send message. Please try again.");
+      }
     } catch (err) {
-      setError("Failed to send message. Please try again.");
+      setError("Network error. Please check your connection and try again.");
       console.error(err);
     } finally {
       setIsLoading(false);
@@ -104,7 +119,7 @@ export function ContactUs() {
             <div className="mt-10">
               <a href="mailto:office.edtech@gmail.com" className="flex items-center gap-3 text-lg md:text-xl text-neutral-300 hover:text-violet-400">
                 <Mail className="w-5 h-5 text-violet-400" />
-                office.edtech@gmail.com
+                offiice.edtech@gmail.com
               </a>
             </div>
 
