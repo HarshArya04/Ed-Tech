@@ -1,4 +1,4 @@
-import { ArrowRight, Bell, Mail, User } from "lucide-react";
+// import { ArrowRight, Bell, Mail, User } from "lucide-react";
 import type { CategoryKey } from "./categoryData";
 
 const quickLinks: Array<{
@@ -14,12 +14,12 @@ const quickLinks: Array<{
   { label: "workshop and seminar", href: "#training-course", category: "workshop_and_seminar" },
 ];
 
-const socials = [
-  { icon: Bell, href: "#", label: "Twitter" },
-  { icon: Mail, href: "#", label: "LinkedIn" },
-  { icon: User, href: "#", label: "YouTube" },
-  { icon: ArrowRight, href: "#", label: "Instagram" },
-];
+// const socials = [
+//   { icon: Bell, href: "#", label: "Twitter" },
+//   { icon: Mail, href: "#", label: "LinkedIn" },
+//   { icon: User, href: "#", label: "YouTube" },
+//   { icon: ArrowRight, href: "#", label: "Instagram" },
+// ];
 
 export function Footer({ onCategoryClick, onNavigate}: { onCategoryClick: (category: CategoryKey) => void, onNavigate: (page: 'home' | 'privacy' | 'terms') => void }) {
   return (
