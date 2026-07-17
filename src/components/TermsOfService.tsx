@@ -11,7 +11,7 @@ export function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-3">1. Acceptance of Terms</h2>
             <p>
-              By accessing or using the EdTech website and enrolling in our training programs, workshops, or seminars, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
+              By accessing or using the FutureLabs website and enrolling in our training programs, workshops, or seminars, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our services.
             </p>
           </section>
 
@@ -25,21 +25,21 @@ export function TermsOfService() {
           <section>
             <h2 className="text-2xl font-semibold text-white mb-3">3. Intellectual Property</h2>
             <p>
-              All content provided on this website, including course materials, curriculum designs, graphics, and code snippets, is the property of EdTech. You may not reproduce, distribute, or create derivative works from our content without explicit written permission.
+              All content provided on this website, including course materials, curriculum designs, graphics, and code snippets, is the property of FutureLabs. You may not reproduce, distribute, or create derivative works from our content without explicit written permission.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold text-white mb-3">4. Student Projects</h2>
             <p>
-              Hardware and software projects built by students during our programs remain the intellectual property of the student. However, by participating in our courses, you grant EdTech a non-exclusive license to display images and descriptions of your projects in our portfolio and promotional materials.
+              Hardware and software projects built by students during our programs remain the intellectual property of the student. However, by participating in our courses, you grant FutureLabs a non-exclusive license to display images and descriptions of your projects in our portfolio and promotional materials.
             </p>
           </section>
 
           <section>
             <h2 className="text-2xl font-semibold text-white mb-3">5. Limitation of Liability</h2>
             <p>
-              EdTech shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your access to or use of, or inability to access or use, our educational services or physical hardware during workshops.
+              FutureLabs shall not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your access to or use of, or inability to access or use, our educational services or physical hardware during workshops.
             </p>
           </section>
         </div>

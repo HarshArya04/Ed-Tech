@@ -26,7 +26,7 @@ export function ContactUs() {
           // REPLACE THIS WITH YOUR ACTUAL ACCESS KEY FROM WEB3FORMS
           access_key: "df0c55bb-daa8-4ffa-9696-cc7a40254fdf", 
           subject: `New Contact Form Submission from ${name}`,
-          from_name: "EdTech Website",
+          from_name: "FutureLabs Website",
           name: name,
           email: email,
           phone: phone || "Not provided",
@@ -117,7 +117,7 @@ export function ContactUs() {
             </div>
 
             <div className="mt-10">
-              <a href="mailto:office.edtech@gmail.com" className="flex items-center gap-3 text-lg md:text-xl text-neutral-300 hover:text-violet-400">
+              <a href="mailto:office.FutureLabs@gmail.com" className="flex items-center gap-3 text-lg md:text-xl text-neutral-300 hover:text-violet-400">
                 <Mail className="w-5 h-5 text-violet-400" />
                 offiice.edtech@gmail.com
               </a>

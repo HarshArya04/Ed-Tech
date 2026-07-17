@@ -60,7 +60,7 @@ The training is tailored for school students and focuses on building confidence,
     description: "Support for talented students.",
     icon: Users,
     gradient: "from-green-500 to-emerald-500",
-    details: `At EdTech, we believe that talented and dedicated students should be recognized and encouraged. To support young innovators, we conduct periodic assessments during our training programs to evaluate students' understanding, creativity, problem-solving abilities, and practical skills.
+    details: `At FutureLabs, we believe that talented and dedicated students should be recognized and encouraged. To support young innovators, we conduct periodic assessments during our training programs to evaluate students' understanding, creativity, problem-solving abilities, and practical skills.
 
 Based on their performance, the Top 5 students may be awarded special scholarships, certificates, or advanced learning opportunities. This initiative motivates students to excel, promotes healthy competition, and encourages continuous learning and innovation.
 

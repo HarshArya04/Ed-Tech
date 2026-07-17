@@ -110,7 +110,7 @@ export function CourseGrid({ onCategoryClick }: { onCategoryClick: (category: Ca
           <div className="w-full px-4 sm:px-6 lg:px-8 mb-10">
             <div className="max-w-screen-xl mx-auto text-center">
               <p className="text-lg md:text-xl text-neutral-200 leading-relaxed mb-4 w-full max-w-screen-2xl mx-auto">
-                EdTech transforms education with technology-driven learning experiences. We offer practical, project-based training across Robotics, Arduino, Electronics, 3D Printing, Coding, and STEM — helping learners develop both hands-on skills and strong conceptual foundations.
+                FutureLabs transforms education with technology-driven learning experiences. We offer practical, project-based training across Robotics, Arduino, Electronics, 3D Printing, Coding, and STEM — helping learners develop both hands-on skills and strong conceptual foundations.
               </p>
 
               <p className="text-base md:text-lg text-neutral-300 leading-relaxed w-full max-w-screen-2xl mx-auto">

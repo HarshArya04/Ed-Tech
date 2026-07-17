@@ -29,7 +29,7 @@ export function Footer({ onCategoryClick, onNavigate}: { onCategoryClick: (categ
           {/* About */}
           <div>
             <h3 className="text-2xl font-bold text-white mb-4">
-              EdTech
+              FutureLabs
             </h3>
             <p className="text-neutral-400 leading-relaxed mb-6">
               Boutique tech education for the next generation of builders. We don't just teach — we mentor, guide, and create alongside you.
@@ -87,7 +87,7 @@ export function Footer({ onCategoryClick, onNavigate}: { onCategoryClick: (categ
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-neutral-800 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-neutral-500">
-            © 2026 EdTech. All rights reserved.
+            © 2026 FutureLabs. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-neutral-500">
             <button 

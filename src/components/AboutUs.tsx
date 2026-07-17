@@ -8,7 +8,7 @@ export function Mentors() {
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">About</span> Us
             </h2>
             <p className="text-neutral-300 text-base md:text-lg leading-8 md:leading-9 max-w-3xl mx-auto">
-              EdTech is dedicated to empowering students with the skills and knowledge needed to succeed in the modern technological world. We believe education should go beyond textbooks and provide hands-on learning experiences that prepare students for future challenges.
+              FutureLabs is dedicated to empowering students with the skills and knowledge needed to succeed in the modern technological world. We believe education should go beyond textbooks and provide hands-on learning experiences that prepare students for future challenges.
             </p>
           </div>
 
@@ -21,7 +21,7 @@ export function Mentors() {
                 Our goal is to make quality technical education accessible to every school, enabling students to learn future-ready skills alongside their regular studies. By nurturing young innovators and creators, we aim to contribute to India&apos;s growth as a global leader in technology and innovation.
               </p>
               <p>
-                At EdTech, we are committed to building a generation of confident learners, skilled problem-solvers, and future technology leaders.
+                At FutureLabs, we are committed to building a generation of confident learners, skilled problem-solvers, and future technology leaders.
               </p>
             </div>
 

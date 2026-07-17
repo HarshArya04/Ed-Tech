@@ -48,7 +48,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onCategoryClick, onNavigateHome}
         <div className="flex items-center justify-between h-24 md:h-30">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <img src={Logo} alt="EdTech logo" className="h-16 md:h-29 w-auto" />
+            <img src={Logo} alt="FutureLabs logo" className="h-16 md:h-29 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
